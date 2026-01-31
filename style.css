@@ -1,0 +1,257 @@
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --primary-color: #645cff;
+    --dark-color: #222;
+    --light-color: #f4f4f4;
+    --whatsapp-color: #25d366;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* HEADER */
+header {
+    background: var(--dark-color);
+    color: white;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header .logo span {
+    color: var(--primary-color);
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: 0.3s;
+}
+
+header nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* HERO SECTION */
+.hero {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1498050108023-c5249f4df085') no-repeat center center/cover;
+    color: white;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--primary-color);
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+/* BOTÃO WHATSAPP */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--whatsapp-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+    transition: transform 0.3s;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+}
+
+.whatsapp-btn img {
+    width: 35px;
+}
+
+/* FOOTER */
+footer {
+    background: var(--dark-color);
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 50px;
+}
+/* ESTILOS DA PÁGINA DE SERVIÇOS */
+.services-section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.title {
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: var(--dark-color);
+}
+
+.services-grid {
+    display: flex;
+    flex-wrap: wrap; /* Isso é o que permite novos cards irem para baixo */
+    gap: 20px;       /* Cria o espaço entre os cards */
+    justify-content: center;
+}
+
+.service-card {
+    background: #db0909;
+    border: 1px solid #ddd;
+    padding: 30px;
+    border-radius: 10px;
+    flex: 1;
+    min-width: 250px;
+    transition: 0.3s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-color);
+}
+
+.service-card h2 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+/* Container que segura o Form e o Mapa */
+.contato-wrapper {
+    display: flex;
+    flex-wrap: wrap; /* Faz o mapa pular para baixo no celular */
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.contato-form, .contato-mapa {
+    flex: 1;
+    min-width: 300px; /* Garante que não fiquem muito esmagados */
+}
+
+/* Organização dos campos do formulário */
+.input-group {
+    display: flex;
+    flex-direction: column; /* Coloca Label em cima do Input */
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.input-group input, .input-group textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+    font-size: 16px;
+}
+
+/* Botão Enviar */
+.btn {
+    background-color: #645cff;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #4b45cc;
+    transform: scale(1.02);
+}
+
+/* Estilo do Mapa */
+.contato-mapa iframe {
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+/* --- MELHORIAS DE BACKGROUND E DESIGN (COLE NO FINAL DO ARQUIVO) --- */
+
+/* Fundo suave para as seções de Serviços e Contato */
+.services-section, .contato-section {
+    background-color: #f4f7f6; /* Um cinza azulado bem leve para dar contraste */
+    padding: 60px 20px;
+    border-radius: 20px;
+    margin: 20px 0;
+}
+
+/* Melhoria nos Cards de Serviço */
+.service-card {
+    background: white; /* Card branco se destaca no fundo cinza */
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05); /* Sombra suave profissional */
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px); /* Efeito de flutuar ao passar o mouse */
+    box-shadow: 0 15px 30px rgba(100, 92, 255, 0.2); /* Sombra colorida no hover */
+}
+
+/* Ajuste no Wrapper de Contato para parecer um bloco único */
+.contato-wrapper {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Estilo para os inputs ficarem mais modernos */
+input, textarea {
+    background-color: #fafafa;
+    border: 1px solid #eee !important;
+    transition: 0.3s;
+}
+
+input:focus, textarea:focus {
+    background-color: #fff;
+    border-color: #645cff !important;
+    box-shadow: 0 0 8px rgba(100, 92, 255, 0.2);
+}
