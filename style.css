@@ -260,3 +260,31 @@ input:focus, textarea:focus {
     flex-direction: column;
   }
 }
+.sobre-section {
+    padding: 120px 20px;
+    background-color: #f9f9f9;
+}
+
+.sobre-section .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.sobre-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: var(--dark-color);
+}
+
+.sobre-section h3 {
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+    color: var(--primary-color);
+}
+
+.sobre-section p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #555;
+}
